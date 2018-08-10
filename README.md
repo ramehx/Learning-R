@@ -1,18 +1,18 @@
 <html>
  <head>
-  <title># Learning-R </title>
+# Learning-R
 Learning R Language
  </head>
  <body>
-  Utilizando a tag <br /> para quebra de linha.
-
+  
+ 
 
 
 
 
 
 ### Assigning values to a variable:
-apples <- 5 \n
+apples <- 5 <br />
 oranges <- 4
 
 ### Booleans
