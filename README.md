@@ -1,28 +1,31 @@
-<html>
- <head>
+<html> <head> </head>
+<body>
+
 # Learning-R
 Learning R Language
- </head>
- <body>
-  
  
+#### Operations
+fruits <- apples + oranges
 
-
-
-
-
-### Assigning values to a variable:
+## Assigning values to a variable:
 apples <- 5 <br />
 oranges <- 4
 
-### Booleans
+## Booleans
 logica <- TRUE
 
-### Operations
-fruits <- apples + oranges
-
-### Class Method (variable type)
+## Class Method (variable type)
 class(my_numeric)
+
+
+
+
+
+
+
+
+
+
 
 
 
