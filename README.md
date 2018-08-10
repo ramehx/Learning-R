@@ -1,5 +1,13 @@
-# Learning-R
+<html>
+ <head>
+  <title># Learning-R </title>
 Learning R Language
+ </head>
+ <body>
+  Utilizando a tag <br /> para quebra de linha.
+
+
+
 
 
 
@@ -15,3 +23,9 @@ fruits <- apples + oranges
 
 ### Class Method (variable type)
 class(my_numeric)
+
+
+
+
+ </body>
+</html>
