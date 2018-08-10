@@ -83,6 +83,17 @@ levels(factor_survey_vector) <- c("Female", "Male")
 temperature_vector <- c("High", "Low", "High","Low", "Medium")  <br />
 factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
 
+###DATASETS
+
+#### head(dataset) : returns the first lines
+#### tail(dataset):  returns the last lines
+#### str(dataset): checks the structure of the dataframe
+
+#### data.frame(vetor1, vetor2, vetor3, vetorn...)    creates a dataframe from one or multiple vectors
+
+#### subset select data according to specified conditions
+subset(df, subset = column1 > 1)
+ 
 
 
 
