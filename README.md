@@ -4,17 +4,23 @@
 # Learning-R
 Learning R Language
  
-#### Operations
+### Assigning values to a variable:
+apples <- 5 <br />
+oranges <- 4 <br />
+my_string <- "Teste R" <br />
+
+### Operations
 fruits <- apples + oranges
 
-#### Assigning values to a variable:
-apples <- 5 <br />
-oranges <- 4
-
-#### Booleans
+### Booleans
 logica <- TRUE
 
-#### Class Method (variable type)
+### Variable Types: 
+numeric: int and floats
+character: char or strings
+logical: booleans
+
+### Class Method (variable type)
 class(my_numeric)
 
 
