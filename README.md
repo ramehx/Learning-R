@@ -16,9 +16,9 @@ fruits <- apples + oranges
 logica <- TRUE
 
 ### Variable Types: 
-numeric: int and floats
-character: char or strings
-logical: booleans
+numeric: int and floats <br />
+character: char or strings <br />
+logical: booleans <br />
 
 ### Class Method (variable type)
 class(my_numeric)
