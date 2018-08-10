@@ -4,7 +4,7 @@ Learning R Language
 
 
 ### Assigning values to a variable:
-apples <- 5 /n
+apples <- 5 \n
 oranges <- 4
 
 ### Booleans
