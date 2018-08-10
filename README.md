@@ -63,6 +63,28 @@ vetor_comparado <- vetor[vetor_comparison]
 ### MEAN method:
 media <- mean(vetor)
 
+### MATRIX
+#### Fills a matrix 3x3 with range 1:9 by row
+matriz = matrix(1:9, nrow = 3, byrow = TRUE)
+#### Fills a matrix with vector's elements
+star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
+ 
+
+### FACTOR
+#### describes categorical variables (ex: sex, color, etc)
+#### factor method defines levels (i.e., the unique cathegories:
+survey_vector <- c("M", "F", "F", "M", "M") <br />
+factor_survey_vector <- factor(survey_vector)
+
+#### Specify the levels of factor_survey_vector
+levels(factor_survey_vector) <- c("Female", "Male")
+
+#### ordering the cathegory levels
+temperature_vector <- c("High", "Low", "High","Low", "Medium")  <br />
+factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
+
+
+
 
 
 
