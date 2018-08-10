@@ -45,6 +45,12 @@ vetor_soma <- vetor1 + vetor2  <br />
 vetor2_soma <- sum(vetor2) <br />
 vetor_soma <- sum(vetor1, vetor2) <br />
 
+### Accessing elements from a vector
+#### In R, the first element is reffered as position 1, not 0 as in python
+vetor3 <- vetor2[3]   <br />
+vetor4 <- vetor1[c(1:3)]    <br />
+poker_midweek <- poker_vector[c(2:4)]   <br />
+
 
 
 
