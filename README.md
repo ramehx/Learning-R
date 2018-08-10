@@ -33,7 +33,7 @@ vetor <- c(1, 2, 0, -5, 100)
 names(vetor) = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 #### You can also create a label vector to simplify atributtion and create 'dictionaries':
-nomes <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+nomes <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")  <br />
 names(vetor) <- nomes
 
 #### Operation with vectors
