@@ -109,7 +109,7 @@ lista2 [[3]] [2]  or  <br />
 lista2$vetor1[2]  or  <br />
 
 #### adding new elements with name to the list
-shining_list_full <- c(shining_list, year=1980)
+lista1 <- c(lista2, ano=1980)
 
 
  </body>
