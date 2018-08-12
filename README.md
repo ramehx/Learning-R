@@ -83,7 +83,7 @@ levels(factor_survey_vector) <- c("Female", "Male")
 temperature_vector <- c("High", "Low", "High","Low", "Medium")  <br />
 factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
 
-###DATASETS
+### DATASETS
 
 #### head(dataset) : returns the first lines
 #### tail(dataset):  returns the last lines
@@ -93,12 +93,23 @@ factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c
 
 #### subset select data according to specified conditions
 subset(df, subset = column1 > 1)
- 
 
 
+### LISTS
+#### Lists can be constructed by list() function, with any elements, such as strings, dataframes, vectors, matrixes, numbers, etc. 
+lista <- list("a", "b", 1, 7, "dsfdsdf")   <br />
+lista2 <- list(1, "a", vetor1, df, matriz1)
 
+#### labeling list's elements
+lista <- list(vec = vetor1, mat = matriz1, df=my_df)
 
+#### selecting elements
+#### select the 2nd element from a vector 'vetor1' in the 3rd position of the list 'lista2'
+lista2 [[3]] [2]  or  <br />
+lista2$vetor1[2]  or  <br />
 
+#### adding new elements with name to the list
+shining_list_full <- c(shining_list, year=1980)
 
 
  </body>
