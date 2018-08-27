@@ -20,6 +20,10 @@ numeric: int and floats <br />
 character: char or strings <br />
 logical: booleans <br />
 
+### Functions to retrieve info about the dataframes / variables
+str(variable)
+glimpse(dataset)
+
 ### Class Method 
 #### 'class' returns the variable type
 class(my_numeric)
