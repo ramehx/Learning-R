@@ -116,5 +116,25 @@ lista2$vetor1[2]  or  <br />
 lista1 <- c(lista2, ano=1980)
 
 
+### FILTER
+filter(people, hair_color == "none", eye_color == "black")
+
+### PIPE WITH FILTER
+#### use filter to select values from a column, pipe this selection into a dataset and then apply to a new dataset
+filtered_dataset <- dataset  %>%  <br />
+  filter(coluna == "blue")
+
+
+### MUTATE
+#### change values iteratively according to a condition
+#### ifelse works as excel's 'if' function
+mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or above median"))
+
+
+
+
+
+
+
  </body>
 </html>
