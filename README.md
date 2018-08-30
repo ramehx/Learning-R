@@ -4,6 +4,17 @@
 # Learning-R
 Learning R Language
  
+### Importing libraries:
+library(dplyr)
+
+### Importing data from packages:
+data(gapminder)
+
+### Variable Types: 
+numeric: int and floats <br />
+character: char or strings <br />
+logical: booleans <br />
+
 ### Assigning values to a variable:
 apples <- 5 <br />
 oranges <- 4 <br />
@@ -14,11 +25,6 @@ fruits <- apples + oranges
 
 ### Booleans
 logica <- TRUE
-
-### Variable Types: 
-numeric: int and floats <br />
-character: char or strings <br />
-logical: booleans <br />
 
 ### Functions to retrieve info about the dataframes / variables
 str(variable)
