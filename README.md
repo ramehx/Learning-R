@@ -27,7 +27,7 @@ fruits <- apples + oranges
 logica <- TRUE
 
 ### Functions to retrieve info about the dataframes / variables
-str(variable)
+str(variable)  <br />
 glimpse(dataset)
 
 ### Class Method 
