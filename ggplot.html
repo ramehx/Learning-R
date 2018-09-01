@@ -38,12 +38,20 @@ ggplot(cars, aes(horsepwr)) +
   ggtitle("Horse Power Plot")
   
 
-#### Create hist of horsepwr with binwidth of 30
+#### Create hist of horsepwr with binwidth of 30 and including graph title
 #### Piping the ggplot and filter into the variable is usual  
 cars %>%
   ggplot(aes(horsepwr)) +
   geom_histogram(binwidth = 30) +
   ggtitle("Histogram with binwidth of 30")  
 
+#### Create a facet grid crossing 2 variables "suv" and "ncyl"  
+  common_cyl %>%
+    ggplot(aes(x = hwy_mpg)) +
+    geom_histogram() +
+    facet_grid(ncyl ~ suv, labeller = label_both) +
+    ggtitle("Mileage by suv and ncyl")
+  
+  
 </body>
 </html>
