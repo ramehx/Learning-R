@@ -87,7 +87,10 @@ survey_vector <- c("M", "F", "F", "M", "M") <br />
 factor_survey_vector <- factor(survey_vector)
 
 #### Specify the levels of factor_survey_vector
+#### Levels may also be used to exhibit the unique cathegories of a variable (ex: levels(sex) >> male, female )
 levels(factor_survey_vector) <- c("Female", "Male")
+
+
 
 #### ordering the cathegory levels
 temperature_vector <- c("High", "Low", "High","Low", "Medium")  <br />
@@ -128,7 +131,7 @@ filter(people, hair_color == "none", eye_color == "black")
 ### PIPE WITH FILTER
 #### use filter to select values from a column, pipe this selection into a dataset and then apply to a new dataset
 filtered_dataset <- dataset  %>%  <br />
-  filter(coluna == "blue")
+  filter(coluna == "blue")   <br />
 
 
 ### MUTATE
@@ -136,9 +139,15 @@ filtered_dataset <- dataset  %>%  <br />
 #### ifelse works as excel's 'if' function
 mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or above median"))
 
+### TABLE
+#### May be used to create a 2-way table to summarize the data in two columns
+table(df$a, df$b)
 
-
-
+### DROPLEVELS
+#### drop all the columns that don't fill a specified condition (filter or factor)
+comics <- comics %>%      <br />
+  filter(align != "Reformed Criminals") %>%      <br />
+  droplevels()                   <br />
 
 
 
