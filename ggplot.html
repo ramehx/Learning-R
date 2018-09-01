@@ -18,7 +18,10 @@ ggplot(comics, aes(x = gender, fill = align)) +
   theme(axis.text.x = element_text(angle = 90))  
 
 
-
+#### Plot of alignment broken down by gender (1 plot for each gender)
+ggplot(comics, aes(x = align)) + 
+  geom_bar() +
+  facet_wrap(~ gender)
 
 
 </body>
