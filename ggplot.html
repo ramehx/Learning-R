@@ -24,5 +24,26 @@ ggplot(comics, aes(x = align)) +
   facet_wrap(~ gender)
 
 
+#### Create box plots of city mpg values by ncyl
+ggplot(common_cyl, aes(x = as.factor(ncyl), y = city_mpg)) +
+  geom_boxplot()
+
+#### Create overlaid density plots 
+ggplot(common_cyl, aes(x = city_mpg, fill = as.factor(ncyl))) +
+  geom_density(alpha = .3)
+
+#### Create hist of horsepwr
+ggplot(cars, aes(horsepwr)) +
+  geom_histogram() +
+  ggtitle("Horse Power Plot")
+  
+
+#### Create hist of horsepwr with binwidth of 30
+#### Piping the ggplot and filter into the variable is usual  
+cars %>%
+  ggplot(aes(horsepwr)) +
+  geom_histogram(binwidth = 30) +
+  ggtitle("Histogram with binwidth of 30")  
+
 </body>
 </html>
