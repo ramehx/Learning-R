@@ -1,2 +1,14 @@
-ggplot(email50, aes(x = num_char, y = exclaim_mess, color = factor(spam))) +
-  geom_point()
+library(ggplot2)
+
+ggplot(email, aes(x = num_char, y = exclaim, color = factor(spam))) + geom_point()
+
+#### Create side-by-side chart of 'align' on proportions of gender
+ggplot(comics, aes(x = align, fill = gender)) + 
+  geom_bar(position = "fill") +
+  ylab("proportion")
+  
+  
+#### Create side-by-side barchart of alignment by gender and vertical x label
+ggplot(comics, aes(x = gender, fill = align)) + 
+  geom_bar(position="dodge") +
+  theme(axis.text.x = element_text(angle = 90))  
