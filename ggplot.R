@@ -1,5 +1,4 @@
-<html> <head> </head>
-<body>
+
 ##GGPLOT2
 
 library(ggplot2)
@@ -60,6 +59,8 @@ cars %>%
   geom_boxplot()
  
   
-  
-</body>
-</html>
+#### Plor spam/non-spam bar chart of emails which word "dollar" appears more than 10 times
+email %>%
+  filter(dollar>10) %>%
+  ggplot(aes(x = spam)) +
+  geom_bar()
