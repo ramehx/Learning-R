@@ -139,11 +139,17 @@ filter(cars, ncyl %in% c(4, 6, 8))
 filtered_dataset <- dataset  %>%  <br />
   filter(coluna == "blue")   <br />
 
-
 ### MUTATE
 #### change values iteratively according to a condition
 #### ifelse works as excel's 'if' function
 mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or above median"))
+
+
+# Filtering Asia countries, then adding column indicating outliers (life expect under 50)
+gap_asia <- gap2007 %>%
+  filter(continent=="Asia") %>%
+  mutate(is_outlier = (lifeExp <50))
+
 
 ### TABLE
 #### May be used to create a 2-way table to summarize the data in two columns
