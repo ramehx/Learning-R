@@ -145,11 +145,11 @@ filtered_dataset <- dataset  %>%  <br />
 mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or above median"))
 
 
-# Filtering Asia countries, then adding column indicating outliers (life expect under 50)
-gap_asia <- gap2007 %>%
-  filter(continent=="Asia") %>%
-  mutate(is_outlier = (lifeExp <50))
-
+#### Filtering Asia countries, then adding column indicating outliers (life expect under 50)
+gap_asia <- gap2007 %>%       <br />
+  filter(continent=="Asia") %>%     <br />
+  mutate(is_outlier = (lifeExp <50))        <br />
+   
 
 ### TABLE
 #### May be used to create a 2-way table to summarize the data in two columns
