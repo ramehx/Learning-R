@@ -51,6 +51,14 @@ cars %>%
     geom_histogram() +
     facet_grid(ncyl ~ suv, labeller = label_both) +
     ggtitle("Mileage by suv and ncyl")
+
+#### Side-by-side boxplot with 2 variables, one logical and other in log scale     
+#### TIP: you can add 0.01 to the log var in order to avoid log(0) (infinite)
+  email %>%
+  mutate(log_num_char = log(num_char)) %>%
+  ggplot(aes(x = spam, y = log_num_char)) +
+  geom_boxplot()
+ 
   
   
 </body>
