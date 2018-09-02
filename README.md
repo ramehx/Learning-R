@@ -88,6 +88,8 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
 #### factor method defines levels (i.e., the unique cathegories:
 survey_vector <- c("M", "F", "F", "M", "M") <br />
 factor_survey_vector <- factor(survey_vector)
+#### Apply the factor function with required order of the level.
+new_order_data <- factor(factor_data,levels = c("East","West","North"))
 
 #### Specify the levels of factor_survey_vector
 #### Levels may also be used to exhibit the unique cathegories of a variable (ex: levels(sex) >> male, female )
