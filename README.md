@@ -93,11 +93,12 @@ factor_survey_vector <- factor(survey_vector)
 #### Levels may also be used to exhibit the unique cathegories of a variable (ex: levels(sex) >> male, female )
 levels(factor_survey_vector) <- c("Female", "Male")
 
-
-
 #### ordering the cathegory levels
 temperature_vector <- c("High", "Low", "High","Low", "Medium")  <br />
 factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
+
+
+
 
 ### DATASETS
 
@@ -154,7 +155,11 @@ comics <- comics %>%      <br />
   filter(align != "Reformed Criminals") %>%      <br />
   droplevels()                   <br />
 
-
+### SUMMARIZE
+#### apply function(s) in a dataframe
+gap2007 %>%
+  group_by(continent) %>%
+  summarize(mean(lifeExp), median(lifeExp))
 
  </body>
 </html>
