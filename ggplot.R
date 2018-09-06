@@ -57,10 +57,23 @@ cars %>%
   mutate(log_num_char = log(num_char)) %>%
   ggplot(aes(x = spam, y = log_num_char)) +
   geom_boxplot()
- 
+
+#### Bloxplot with 6 intervals (breaks) of the x variable
+ggplot(data = ncbirths, 
+       aes(x = cut(weeks, breaks = 5), y = weight)) + 
+  geom_boxplot()
   
 #### Plor spam/non-spam bar chart of emails which word "dollar" appears more than 10 times
 email %>%
   filter(dollar>10) %>%
   ggplot(aes(x = spam)) +
   geom_bar()
+
+
+#### Scatterplot with coord_trans()
+ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
+  geom_point() + coord_trans(x = "log10", y = "log10")
+
+#### Scatterplot with scale_x_log10() and scale_y_log10()
+ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
+  geom_point() + scale_x_log10() + scale_y_log10()
