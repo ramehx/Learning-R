@@ -165,9 +165,9 @@ comics <- comics %>%      <br />
 
 ### SUMMARIZE
 #### apply function(s) in a dataframe
-gap2007 %>%
-  group_by(continent) %>%
-  summarize(mean(lifeExp), median(lifeExp))
+gap2007 %>%       <br />
+  group_by(continent) %>%        <br />
+  summarize(mean(lifeExp), median(lifeExp))         <br />
 
  </body>
 </html>
