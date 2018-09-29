@@ -3,26 +3,33 @@ ggplot(data = bdims, aes(x = hgt, y = wgt)) +
   geom_point() + 
   geom_smooth(method = "lm", se = FALSE)
 
+# Through geom_abline() method:
+ggplot(data = bdims, aes(x = hgt, y = wgt)) + 
+  geom_point() + 
+  geom_abline(data = coefs, aes(intercept = `(Intercept)`, slope = hgt),  color = "dodgerblue")
+
+
 # correlation between 2 variables
-# a negative value = inverse correlation
-# a value between -0.2 and 0.2 = low correlation
-# 0.5 < x < 0.8 = good correlation
-# 0.8 < x = strong correlation
+# a negative value => inverse correlation
+# a value between -0.2 and 0.2 => low correlation
+# 0.5 < x < 0.8 => good correlation
+# 0.8 < x => strong correlation
 cor(bdims.hgt, bdims.wgt)
 
-# Linear model for weight as a function of height
-lm(hgt ~ wgt, data = bdims)
+# Linear model for weight as a function of height attributed to a variable class "lm"
+mod <-lm(hgt ~ wgt, data = bdims)
 
-# Show the coefficients
+# Show the coefficients of the linear model 'mod'
 coef(mod)
 
 # Show the full output
 summary(mod)
 
-# takes a model object as an argument and returns a data frame that contains the data on which the model was fit
+# takes a model object as an argument and returns a data frame that contains only the data on which the model was fit
+# fitted.values() may also be used
  augment(mod)
 
-
-# Predict the weight of ben
+# Predicting the expected value of weight of a new individual "ben" which data is not in the original 'bdims' dataset
+# 'mod' is the fitted model for weight as a function of height
 predict(mod, newdata=ben)
 
