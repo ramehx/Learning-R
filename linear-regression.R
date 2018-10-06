@@ -16,7 +16,7 @@ ggplot(data = bdims, aes(x = hgt, y = wgt)) +
 # 0.8 < x => strong correlation
 cor(bdims.hgt, bdims.wgt)
 
-# Linear model for weight as a function of height attributed to a variable class "lm"
+# Linear model for weight as a function of height attributed to a variable 'mod' which class is linear model
 mod <-lm(hgt ~ wgt, data = bdims)
 
 # Show the coefficients of the linear model 'mod'
@@ -33,3 +33,5 @@ summary(mod)
 # 'mod' is the fitted model for weight as a function of height
 predict(mod, newdata=ben)
 
+# Multiple regression using 2 variables (age and parity) which explains a result variable bwt
+birthweight <- lm(bwt ~ age + parity, data = babies )
