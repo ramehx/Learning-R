@@ -151,7 +151,11 @@ mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or abo
 gap_asia <- gap2007 %>%       <br />
   filter(continent=="Asia") %>%     <br />
   mutate(is_outlier = (lifeExp <50))        <br />
-   
+ 
+#### Creating a new variable 'noise' filled with values of rnorm() function and inserting into 'mario_kart' dataset
+#### rnorm(N) generates a vector of N pseudo-random normals with mean 0 and variance 1. N had to be the number of observations (lines)
+mario_kart_noisy <- mario_kart %>%
+  mutate(noise = rnorm(141)) 
 
 ### TABLE
 #### May be used to create a 2-way table to summarize the data in two columns
