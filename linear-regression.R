@@ -35,3 +35,6 @@ predict(mod, newdata=ben)
 
 # Multiple regression using 2 variables (age and parity) which explains a result variable bwt
 birthweight <- lm(bwt ~ age + parity, data = babies )
+
+# including interaction between the 2 explanatory variables as a third term:
+birthweight <- lm(formula = bwt ~ age + parity + age:parity, data = babies )
