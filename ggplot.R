@@ -69,7 +69,6 @@ email %>%
   ggplot(aes(x = spam)) +
   geom_bar()
 
-
 #### Scatterplot with coord_trans()
 ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
   geom_point() + coord_trans(x = "log10", y = "log10")
@@ -77,3 +76,8 @@ ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
 #### Scatterplot with scale_x_log10() and scale_y_log10()
 ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
   geom_point() + scale_x_log10() + scale_y_log10()
+
+# multiple regression plot with interaction
+ggplot(data = mario_kart, aes(x = duration, y = totalPr, color = cond)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se=FALSE)
