@@ -135,6 +135,8 @@ lista1 <- c(lista2, ano=1980)
 filter(people, hair_color == "none", eye_color == "black")
 #### to filter by discrete values
 filter(cars, ncyl %in% c(4, 6, 8))
+## filtering a numerical interval
+filter(MedGPA, GPA >= 3.375  & GPA <= 3.77)
 
 ### PIPE WITH FILTER
 #### use filter to select values from a column, pipe this selection into a dataset and then apply to a new dataset
