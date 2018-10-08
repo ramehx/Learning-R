@@ -33,8 +33,21 @@ summary(mod)
 # 'mod' is the fitted model for weight as a function of height
 predict(mod, newdata=ben)
 
-# Multiple regression using 2 variables (age and parity) which explains a result variable bwt
+# MULTIPLE REGRESSION: uses 2 explanatory variables which explains a result variable. There are 2 ways:
+# 1) one discrete variable (Ex: 2 dates), resulting in paralel lines
 birthweight <- lm(bwt ~ age + parity, data = babies )
 
-# including interaction between the 2 explanatory variables as a third term:
+# 2) two continuous variables, interacting to the result:
 birthweight <- lm(formula = bwt ~ age + parity + age:parity, data = babies )
+
+# LOGISTIC REGRESSION - applied when the result variable is cathegorical (success and failure for example) 
+# generalized linear models (GLM)
+glm(formula = Acceptance~ GPA, data = MedGPA, family = binomial)
+
+# scatterplot with jitter
+data_space <- ggplot(MedGPA, aes(x=GPA, y=Acceptance)) + 
+  geom_jitter(width=0, height=0.05, alpha = .5)
+
+# add logistic curve
+data_space + 
+  geom_smooth(method = "glm", method.args = list(family = "binomial"), se=FALSE)
