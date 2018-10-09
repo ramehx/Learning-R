@@ -51,3 +51,36 @@ data_space <- ggplot(MedGPA, aes(x=GPA, y=Acceptance)) +
 # add logistic curve
 data_space + 
   geom_smooth(method = "glm", method.args = list(family = "binomial"), se=FALSE)
+
+
+## Using bins to define ranges of GPAs and calculating the mean (probability) in each bin
+###############################
+
+# binned points and line
+data_space <- ggplot(MedGPA_binned, aes(mean_GPA, acceptance_rate)) + geom_line() + geom_point()
+
+# augmented model. Creating the prediction on the scale of the response variable
+MedGPA_plus <- augment(x=mod, newdate= MedGPA_binned, type.predict = "response")
+
+# logistic model on probability scale
+data_space +
+  geom_line(data = MedGPA_plus, aes(x=GPA , y=.fitted), color = "red")
+  
+ 
+#### ODs - Likelyhood (probability) of happening of an event
+###############################################
+# compute odds for bins
+MedGPA_binned <- MedGPA_binned %>%
+  mutate(odds = acceptance_rate/(1 - acceptance_rate))
+
+# plot binned odds
+data_space <- ggplot(MedGPA_binned, aes(mean_GPA, odds)) +
+  geom_line() + geom_point()
+
+# compute odds for observations
+MedGPA_plus <- MedGPA_plus %>%
+  mutate(odds_hat = .fitted/(1 - .fitted))
+
+# logistic model on odds scale
+data_space + 
+  geom_line(data= MedGPA_plus, aes(x=GPA, y= odds_hat), color = "red")
