@@ -16,6 +16,9 @@ ggplot(data = bdims, aes(x = hgt, y = wgt)) +
 # 0.8 < x => strong correlation
 cor(bdims.hgt, bdims.wgt)
 
+# check correlation between all variables in a dataframe with scatterplot
+pairs(nyc)
+
 # Linear model for weight as a function of height attributed to a variable 'mod' which class is linear model
 mod <-lm(hgt ~ wgt, data = bdims)
 
