@@ -29,6 +29,9 @@ summary(mod)
 # fitted.values() may also be used
  augment(mod)
 
+# augment may also be used to make predictions about new observations  
+augment(mod, newdata = new_data, type.predict = "response")
+
 # Predicting the expected value of weight of a new individual "ben" which data is not in the original 'bdims' dataset
 # 'mod' is the fitted model for weight as a function of height
 predict(mod, newdata=ben)
@@ -72,6 +75,8 @@ data_space +
 # compute odds for bins
 MedGPA_binned <- MedGPA_binned %>%
   mutate(odds = acceptance_rate/(1 - acceptance_rate))
+# using a log scale to get a linear function
+  mutate(log_odds = log(acceptance_rate/(1-acceptance_rate)))
 
 # plot binned odds
 data_space <- ggplot(MedGPA_binned, aes(mean_GPA, odds)) +
@@ -80,7 +85,11 @@ data_space <- ggplot(MedGPA_binned, aes(mean_GPA, odds)) +
 # compute odds for observations
 MedGPA_plus <- MedGPA_plus %>%
   mutate(odds_hat = .fitted/(1 - .fitted))
+# using a log scale to get a linear function
+  mutate(log_odds_hat = log(.fitted/(1-.fitted)))
 
 # logistic model on odds scale
 data_space + 
   geom_line(data= MedGPA_plus, aes(x=GPA, y= odds_hat), color = "red")
+
+
