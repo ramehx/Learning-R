@@ -11,9 +11,9 @@ ggplot(data = bdims, aes(x = hgt, y = wgt)) +
 
 # correlation between 2 variables
 # a negative value => inverse correlation
-# a value between -0.2 and 0.2 => low correlation
-# 0.5 < x < 0.8 => good correlation
-# 0.8 < x => strong correlation
+# a value between -0.5 and 0.5 => low correlation
+# 0.5 < x < 0.8 (or -) => good correlation
+# 0.8 < x (or -) => strong correlation
 cor(bdims.hgt, bdims.wgt)
 
 # check correlation between all variables in a dataframe with scatterplot
